@@ -18,12 +18,9 @@ int Smartgas::connect() {
 int Smartgas::readFileValue(string file) {
     int connected = this->connect();
     if (connected == 2) {                               // Usando valores simulados
-        if (file == "led")
+        if (file == "gas")
             return this->simLedValue;
-        else if (file == "threshold")
-            return this->simThresholdValue;
         else {
-            // "ldr" (luminosity): Gera um número aleatório entre 0 e 100
             random_device dev;
             mt19937 rng(dev());
             uniform_int_distribution<mt19937::result_type> dist100(0,100);
@@ -38,37 +35,8 @@ int Smartgas::readFileValue(string file) {
             return value; }}
     // Se chegou aqui, não foi possível conectar ou se comunicar com o dispositivo
     return -1;}
-bool Smartgas::writeFileValue(string file, int value) {
-    int connected = this->connect();
-    if (connected == 2) {                                // Usando valores simulados
-        if (file == "led") {
-            this->simLedValue = value;
-            return true;
-        }
-        else if (file == "threshold") {
-            this->simThresholdValue = value;
-            return true;
-        }}
-    else if (connected == 1) {                          // Conectado. Vamos solicitar o valor ao dispositivo
-        string filename = string("/sys/kernel/smartgas/") + file;
-        ofstream file(filename, ios::trunc);            // Abre o arquivo limpando o seu conteúdo
 
-        if (file.is_open()) {                           // Verifica se o arquivo foi aberto com sucesso
-            file << value;                              // Escreve o ledValue no arquivo
-            file.close();
-            return true;
-        }}
-    // Se chegou aqui, não foi possível conectar ou se comunicar com o dispositivo
-    return false;
-}
-int Smartgas::getLed() {
-    return this->readFileValue("led");}
-bool Smartgas::setLed(int ledValue) {
-    return this->writeFileValue("led", ledValue);}
 int Smartgas::getLuminosity() {
-    return this->readFileValue("ldr");}
-int Smartgas::getThreshold() {
-    return this->readFileValue("threshold");}
-bool Smartgas::setThreshold(int thresholdValue) {
-    return this->writeFileValue("threshold", thresholdValue);}
+    return this->readFileValue("gas");}
+
 } // namespace
