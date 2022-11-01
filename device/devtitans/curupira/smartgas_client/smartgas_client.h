@@ -4,11 +4,11 @@
 #include <string.h>               // Função strcmp
 #include <stdlib.h>               // Função atoi
 
-#include "smartlamp_lib.h"        // Classe Smartlamp
+#include "smartgas_lib.h"        // Classe Smartgas
 
-namespace devtitans::smartlamp {  // Pacote que a classe abaixo pertence
+namespace devtitans::smartgas {  // Pacote que a classe abaixo pertence
 
-class SmartlampClient {           // Classe
+class SmartgasClient {           // Classe
 
     public:
         void start(int argc, char **argv);
