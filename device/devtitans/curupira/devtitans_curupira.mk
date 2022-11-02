@@ -6,3 +6,5 @@ PRODUCT_NAME := devtitans_curupira
 PRODUCT_DEVICE := curupira
 PRODUCT_BRAND := CurupiraBrand
 PRODUCT_MODEL := CurupiraModel
+PRODUCT_PACKAGES += \
+	smartlamp_client
