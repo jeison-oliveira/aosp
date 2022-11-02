@@ -8,3 +8,18 @@ PRODUCT_BRAND := CurupiraBrand
 PRODUCT_MODEL := CurupiraModel
 PRODUCT_PACKAGES += \
 	smartlamp_client
+
+# Descomentar para testar HAL
+
+# BOARD_SEPOLICY_DIRS += device/devtitans/curupira/sepolicy
+
+# Smartgas AIDL Interface
+# PRODUCT_PACKAGES += devtitans.smartgas
+
+# Smartgas Binder Service
+# PRODUCT_PACKAGES += devtitans.smartgas-service
+
+# Device Framework Matrix (Declara que o nosso produto Kraken precisa do serviço smartgas)
+# DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/devtitans/curupira/device_framework_matrix.xml
+
+# FIM HAL

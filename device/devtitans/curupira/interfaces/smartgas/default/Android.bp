@@ -1,0 +1,21 @@
+cc_binary {
+    name:                  "devtitans.smartgas-service",
+    relative_install_path: "hw",
+    init_rc:               ["smartgas-default.rc"],
+    vintf_fragments:       ["smartgas-default.xml"],
+    vendor:                true,
+
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "smartlamp_lib",
+        "devtitans.smartlamp-V1-ndk_platform",
+    ],
+
+    srcs: [
+        "smartgas_service.cpp",
+        "main.cpp"
+    ],
+
+    required: [ "smartgas_lib" ],
+}

@@ -1,0 +1,2 @@
+# Define o rótulo do serviço AIDL smartgas
+devtitans.smartgas.ISmartgas/default  u:object_r:smartgas_service:s0

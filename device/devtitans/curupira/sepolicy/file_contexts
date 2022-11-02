@@ -1,0 +1,2 @@
+# Define o rótulo do daemon smartgas
+/vendor/bin/hw/devtitans.smartgas-service  u:object_r:smartgas_daemon_exec:s0

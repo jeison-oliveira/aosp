@@ -1,0 +1,5 @@
+service devtitans.smartgas-service /vendor/bin/hw/devtitans.smartgas-service
+        interface aidl devtitans.smartgas.ISmartgas/default
+        class hal
+        user root
+        group root
