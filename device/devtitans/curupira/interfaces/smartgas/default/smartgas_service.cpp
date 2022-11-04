@@ -7,9 +7,9 @@ namespace aidl::devtitans::smartgas {
         return ndk::ScopedAStatus::ok();
     }
 
-    ndk::ScopedAStatus SmartlampService::getSensorValue(int32_t* _aidl_return) {
-        *_aidl_return = 100; //this->smartgas.getGas();
-        LOG(INFO) << "getSensorValue(): " << *_aidl_return;
+    ndk::ScopedAStatus SmartlampService::getConcentration(int32_t* _aidl_return) {
+        *_aidl_return = 100; //this->smartgas.getConcentration();
+        LOG(INFO) << "getConcentration(): " << *_aidl_return;
         return ndk::ScopedAStatus::ok();
     }
 }

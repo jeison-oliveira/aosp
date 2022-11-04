@@ -7,7 +7,7 @@ PRODUCT_DEVICE := curupira
 PRODUCT_BRAND := CurupiraBrand
 PRODUCT_MODEL := CurupiraModel
 PRODUCT_PACKAGES += \
-	smartlamp_client
+	smartgas_client
 
 # Descomentar para testar HAL
 

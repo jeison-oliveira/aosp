@@ -1,4 +1,5 @@
-Android.bp
+./Android.bp
+.vscode/
 art
 audit2allow-read.txt
 bionic

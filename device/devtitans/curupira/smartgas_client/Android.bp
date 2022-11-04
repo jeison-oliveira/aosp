@@ -1,0 +1,9 @@
+cc_binary {
+    name:         "smartgas_client",
+    srcs:         [ "smartgas_client.cpp" ],
+
+    shared_libs:  [ "smartgas_lib" ],
+    required:     [ "smartgas_lib" ],
+
+    vendor: true,
+}

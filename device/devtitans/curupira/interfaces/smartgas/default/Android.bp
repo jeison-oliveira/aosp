@@ -8,8 +8,8 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "smartlamp_lib",
-        "devtitans.smartlamp-V1-ndk_platform",
+        "smartgas_lib",
+        "devtitans.smartgas_lib-V1-ndk_platform",
     ],
 
     srcs: [
