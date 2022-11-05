@@ -9,7 +9,7 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "smartgas_lib",
-        "devtitans.smartgas_lib-V1-ndk_platform",
+        "devtitans.smartgas-V1-ndk_platform",
     ],
 
     srcs: [

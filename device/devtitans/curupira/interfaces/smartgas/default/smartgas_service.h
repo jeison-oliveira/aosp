@@ -6,9 +6,9 @@
 
 #include <aidl/devtitans/smartgas/BnSmartgas.h>
 
-// #include "smartgas_lib.h"
+#include "smartgas_lib.h"
 
-// using namespace devtitans::smartgas;
+using namespace devtitans::smartgas;
 
 namespace aidl::devtitans::smartgas {
 
@@ -17,7 +17,7 @@ namespace aidl::devtitans::smartgas {
             ndk::ScopedAStatus connect(int32_t *_aidl_return) override;
             ndk::ScopedAStatus getConcentration(int32_t *_aidl_return) override;
 
-   //     private:
-   //         Smartgas smartgas;
+        private:
+            Smartgas smartgas;
     };
 }
