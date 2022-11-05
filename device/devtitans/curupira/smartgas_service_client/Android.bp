@@ -1,0 +1,9 @@
+cc_binary {
+    name: "smartgas_service_client",
+    srcs: ["smartgas_service_client.cpp"],
+    vendor: true,
+    shared_libs: [
+        "libbinder_ndk",
+        "devtitans.smartgas-V1-ndk_platform",
+    ]
+}
