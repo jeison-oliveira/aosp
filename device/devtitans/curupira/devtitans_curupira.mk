@@ -18,7 +18,10 @@ PRODUCT_PACKAGES += devtitans.smartgas
 # Smartgas Binder Service
 PRODUCT_PACKAGES += devtitans.smartgas-service
 
-# Device Framework Matrix (Declara que o nosso produto Kraken precisa do serviço smartgas)
+# Device Framework Matrix (Declara que o nosso produto Curupira precisa do serviço smartgas)
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/devtitans/curupira/device_framework_matrix.xml
 
 PRODUCT_PACKAGES += smartgas_service_client
+
+# Manager
+PRODUCT_PACKAGES += devtitans.smartgasmanager

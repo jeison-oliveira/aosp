@@ -10,7 +10,7 @@ int ledMode = MODE_MANUAL;
 int mq2Pin = 34;
 int mq2Max = 10000;
 
-int thresholdValue = 1000;
+int thresholdValue = 2000;
 
 void setup() {
     Serial.begin(9600);
