@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".GasNotificationService" android:exported="false">
+            <intent-filter>
+                <action android:name="devtitans.smartgasapp.SMARTGAS_BROADCAST" />
+            </intent-filter>
+        </service>
+
         <uses-library android:name="devtitans.smartgasmanager" android:required="true" />
     </application>
 

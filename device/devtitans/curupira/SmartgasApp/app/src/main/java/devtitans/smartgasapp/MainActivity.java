@@ -1,8 +1,14 @@
 package devtitans.smartgasapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
@@ -27,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         manager = SmartgasManager.getInstance();
 
         updateAll(null);
+        GasCheckScheduler.scheduleGasCheck(this);
     }
 
     public void updateAll(View view) {
