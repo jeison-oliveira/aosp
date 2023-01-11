@@ -27,6 +27,15 @@
                 <action android:name="devtitans.smartgasapp.SMARTGAS_BROADCAST" />
             </intent-filter>
         </service>
+        <receiver
+            android:name=".BootBroadcastReceiver"
+            android:exported="true"
+            android:enabled="true"
+            android:directBootAware="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <uses-library android:name="devtitans.smartgasmanager" android:required="true" />
     </application>
