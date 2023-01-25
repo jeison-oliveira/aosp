@@ -1,5 +1,5 @@
 android_app {
-    name: "SmartgasApp",
+    name: "devtitans.smartgasapp",
 
     srcs:          [ "app/src/**/*.java" ],
     resource_dirs: [ "app/src/main/res" ],
