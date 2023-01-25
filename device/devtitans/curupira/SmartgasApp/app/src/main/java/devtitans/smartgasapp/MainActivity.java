@@ -2,6 +2,7 @@ package devtitans.smartgasapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -33,7 +34,15 @@ public class MainActivity extends AppCompatActivity {
         manager = SmartgasManager.getInstance();
 
         updateAll(null);
-        GasCheckScheduler.scheduleGasCheck(this);
+//        GasCheckScheduler.scheduleGasCheck(this);
+
+//        Intent serviceIntent = new Intent(this,
+//                MyBackgroundService.class);
+//        startService(serviceIntent);
+        if(!foregroundServiceRunning()) {
+            Intent serviceIntent = new Intent(this, MyForegroundService.class);
+            startForegroundService(serviceIntent);
+        }
     }
 
     public void updateAll(View view) {
@@ -65,5 +74,15 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "Erro atualizando dados:", e);
         }
 
+    }
+
+    public boolean foregroundServiceRunning(){
+        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for(ActivityManager.RunningServiceInfo service: activityManager.getRunningServices(Integer.MAX_VALUE)) {
+            if(MyForegroundService.class.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
